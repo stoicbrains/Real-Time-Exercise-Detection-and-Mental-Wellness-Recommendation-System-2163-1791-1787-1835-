@@ -1,0 +1,65 @@
+.box{
+    position: absolute;
+    top: 7rem;
+    right: 1.4%;
+    transition: all 250ms linear;
+}
+.inputbox{
+    display: flex;
+    border: 2px solid black;
+    height: 40px;
+    width: 300px;
+    border-radius: 11px;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+}
+
+.inputboxImg1{
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    right: 2.5rem;
+    top: 12px;
+    pointer-events: none;
+}
+.inputboxImg2{
+    position: absolute;
+    height: 17px;
+    width: 17px;
+    right: 2.5rem;
+    top: 4.3rem;
+}
+.inputboxImg2:hover{
+    cursor: pointer;}
+
+.inputboxImg3{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 1.2rem;
+    top: 3.3rem;
+}
+.inputboxImg4{
+    height: 15px;
+    width: 15px;
+    position: absolute;
+    right: 1.2rem;
+    top: 7.15rem;
+}
+.inputboxImg5{
+    height: 17px;
+    width: 17px;
+    position: absolute;
+    right: 1.2rem;
+    top: 11.25rem;
+}
+.inputboxImg5:hover{
+    cursor: pointer;
+}
+
+.loader{
+    filter: drop-shadow(11px 11px 18px gray);
+    object-fit: cover;
+}

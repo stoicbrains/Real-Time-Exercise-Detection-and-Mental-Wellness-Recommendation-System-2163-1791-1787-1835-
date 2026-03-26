@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body{
+  background-color: #effaf6;
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+.shadower{
+  box-shadow: 7px 3px 7px 3px rgba(253, 247, 247, 0.352),
+  2px 2px 2px 3px red;
+}
+.caoursel{
+  height:100%;
+  width:100%;
+  border-radius:0px 21px 21px 0px;
+  background-image: url(../app//Assets/bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+}
+.flower{
+  color: white;
+  overflow: hidden;
+  
+  
+}
+.flower::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 0%;
+  background-color: rgb(0, 0, 27);
+  z-index: -1;
+  transition:all;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+.flower:hover::before{
+  width: 100%;
+}
