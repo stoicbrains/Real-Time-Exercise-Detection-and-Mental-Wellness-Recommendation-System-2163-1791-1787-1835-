@@ -42,55 +42,45 @@ const UserForm = () => {
   };
   const [Trigger,setTrigger] = useState(false);
   return (
-    <>
+    <div className="flex flex-col items-center justify-center w-full h-full gap-2">
       <form
         onSubmit={handleSubmit}
         method="post"
-        className="flex flex-col gap-3 w-100% justify-center items-center translate-y-[7rem]"
+        className="flex flex-col gap-4 w-full justify-center items-center"
       >
-        <h1 className="translate-y-[-2rem] text-xl tracking-[0.3rem] font-bold">Create New User</h1>
+        <h1 className="text-xl tracking-[0.3rem] font-bold mb-4 text-center">Create New User</h1>
         
-        <input
-          id="name"
-          name="name"
-          type="text"
-          placeholder="Name"
-          onChange={handleChange}
-          required={true}
-          className={styles.inputbox}
-        />
-        <span><Image src={person} alt="error" className={styles.inputboxImg3}/></span>
+        <div className="relative">
+          <input
+            id="name" name="name" type="text" placeholder="Name" onChange={handleChange} required={true}
+            className={styles.inputbox}
+          />
+          <Image src={person} alt="error" className="absolute right-3 top-1/2 -translate-y-1/2 w-[15px] h-[15px] pointer-events-none"/>
+        </div>
 
-        
-        <input
-          id="email"
-          placeholder="email"
-          name="email"
-          type="text"
-          onChange={handleChange}
-          required={true}
-          className={styles.inputbox}
-        />
-        <span><Image src={em} alt="error" className={styles.inputboxImg4}/></span>
-        <input
-          id="password"
-          placeholder="password"
-          name="password"
-          type={Trigger?'text':'password'}
-          onChange={handleChange}
-          required={true}
-          className={styles.inputbox}
-        />
-        <span><Image src={pwd} alt="error" className={styles.inputboxImg5} onClick={()=>{setTrigger(!Trigger)
-        }}/></span>
+        <div className="relative">
+          <input
+            id="email" placeholder="email" name="email" type="text" onChange={handleChange} required={true}
+            className={styles.inputbox}
+          />
+          <Image src={em} alt="error" className="absolute right-3 top-1/2 -translate-y-1/2 w-[15px] h-[15px] pointer-events-none"/>
+        </div>
+
+        <div className="relative">
+          <input
+            id="password" placeholder="password" name="password" type={Trigger?'text':'password'} onChange={handleChange} required={true}
+            className={styles.inputbox}
+          />
+          <Image src={pwd} alt="error" className="absolute right-3 top-1/2 -translate-y-1/2 w-[17px] h-[17px] cursor-pointer" onClick={()=>{setTrigger(!Trigger)}}/>
+        </div>
 
         <button
           type="submit"
-          className=" hover:bg-green-100 h-[40px] w-[200px] rounded-[11px] translate-y-4 border-2 border-black font-bold transition-all duration-300"
+          className=" hover:bg-green-100 h-[40px] w-[200px] rounded-[11px] border-2 border-black font-bold transition-all duration-300 mt-4"
         >CreateUser</button>
       </form>
-      <p className="text-red-500">{errorMessage}</p>
-    </>
+      <p className="text-red-500 text-center">{errorMessage}</p>
+    </div>
   );
 };
 
