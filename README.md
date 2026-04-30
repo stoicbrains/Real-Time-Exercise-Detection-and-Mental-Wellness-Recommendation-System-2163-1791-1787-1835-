@@ -1,5 +1,52 @@
 
+# 🧠 Project Harmony - Mental Health Support Platform
+
+## 📌 Overview
+Project Harmony is a web-based mental health platform that connects users with mental health professionals (psychologists, psychiatrists) and enables communication through video and voice calls.
+
+The platform also includes a community forum where users can share experiences and seek advice. It integrates modern technologies to deliver a secure, real-time, and interactive experience.
+
+---
+
+## 👥 Team Members
+- Keshav Soni – 2210991787
+- Khushal Goyal – 2210991791
+- Kushal Goel – 2210991835
+- Rishi Raj – 2210992163
+
+---
+
+## 📚 Table of Contents
+- Technologies Used
+- Features
+- Architecture Overview
+- Setup and Installation
+- Frontend Structure
+- Backend Structure
+- API and Services
+- Sendbird Integration
+- Database
+- Security Considerations
+- Future Enhancements
+- Contributing
+- License
+
+---
+
+## 🛠️ Technologies Used
+
+### Frontend
+- Next.js
+- Tailwind CSS
+- Framer Motion
+
+### Backend
+- Node.js
+- Express.js
+
+
 ### Database
+
 - **Firestore** → real-time chat & presence
 - **MongoDB** → user profiles, forum posts
 
