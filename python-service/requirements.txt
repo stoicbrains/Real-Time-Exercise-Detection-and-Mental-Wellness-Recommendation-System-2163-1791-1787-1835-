@@ -1,0 +1,5 @@
+# Legacy pose/hands etc. use mp.solutions; that API was removed in mediapipe>=0.10.31
+# (and some 0.10.3x macOS wheels). Pin 0.10.21 for stable Solutions API + cv2 via opencv-contrib.
+mediapipe==0.10.21
+flask>=3.0
+flask-cors>=4.0

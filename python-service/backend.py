@@ -4,6 +4,12 @@ import cv2
 import mediapipe as mp
 import numpy as np
 
+if not hasattr(mp, "solutions"):
+    raise ImportError(
+        "MediaPipe is missing mp.solutions (common with mediapipe>=0.10.31). "
+        "From the python-service folder run: pip install -r requirements.txt"
+    )
+
 app = Flask(__name__)
 CORS(app)
 

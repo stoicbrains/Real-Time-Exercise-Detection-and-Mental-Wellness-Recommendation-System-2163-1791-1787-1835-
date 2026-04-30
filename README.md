@@ -8,6 +8,7 @@ Technologies Used
 Features
 Architecture Overview
 Setup and Installation
+Python exercise backend (real-time detection)
 Frontend Structure
 Backend Structure
 API and Services
@@ -81,6 +82,39 @@ npm run dev
 # or
 yarn dev
 Your app should now be running at http://localhost:3000.
+
+Python exercise backend (real-time detection)
+The Exercise pages (Bicep Curl, Press, Squat) stream the webcam through small Flask services that use MediaPipe pose estimation. The Next.js app expects these servers on localhost while you use Start on an exercise route.
+
+Prerequisites
+Python 3.10.x recommended (see python-service/.python-version). A webcam for live detection.
+pip install uses a pinned MediaPipe version that still exposes mp.solutions; do not upgrade mediapipe arbitrarily or imports may break.
+
+Steps
+1. Open a terminal and go to the Python service folder:
+   cd python-service
+
+2. Create and activate a virtual environment (example with Python 3.10):
+   python3.10 -m venv .venv
+   source .venv/bin/activate
+   On Windows: .venv\Scripts\activate
+
+3. Install dependencies:
+   pip install -r requirements.txt
+
+4. Start all three Flask backends at once (Press, Squat, Bicep Curl):
+   ./start-backend.sh
+   On Windows if bash is unavailable, open three terminals and run:
+   python backend2.py   (port 5001 — Press)
+   python backend3.py   (port 5002 — Squat)
+   python backend.py    (port 5003 — Bicep Curl)
+
+5. Keep npm run dev running in another terminal. Visit an exercise page (e.g. http://localhost:3000/exercise/curl), click START, and allow camera access in the browser if prompted.
+
+Port map (must match the frontend)
+5001 — Press (backend2.py)
+5002 — Squat (backend3.py)
+5003 — Bicep Curl (backend.py)
 
 Frontend Structure
 The frontend is organized into several main sections:
