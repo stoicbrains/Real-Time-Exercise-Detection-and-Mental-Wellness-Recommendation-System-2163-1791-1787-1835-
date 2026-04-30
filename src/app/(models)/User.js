@@ -1,8 +1,5 @@
 import mongoose, { Schema } from "mongoose";
 
-mongoose.connect(process.env.MONGODB_URI);
-mongoose.Promise = global.Promise;
-
 const userSchema = new Schema(
   {
     name: String,
@@ -14,6 +11,17 @@ const userSchema = new Schema(
     timestamps: true,
   }
 );
+
+export const connectDB = async () => {
+  try {
+    if (mongoose.connection.readyState >= 1) {
+      return;
+    }
+    await mongoose.connect(process.env.MONGODB_URI);
+  } catch (error) {
+    console.error("DB Connection Error:", error);
+  }
+};
 
 const User = mongoose.models.User || mongoose.model("User", userSchema);
 

@@ -1,9 +1,10 @@
-import User from "@/app/(models)/User";
+import User, { connectDB } from "@/app/(models)/User";
 import { NextResponse } from "next/server";
 import bcrypt from "bcryptjs";
 
 export async function POST(req) {
   try {
+    await connectDB();
     const body = await req.json();
     const userData = body.formData;
 

@@ -1,6 +1,6 @@
 import GoogleProvider from "next-auth/providers/google";
 import  CredentialsProvider  from "next-auth/providers/credentials";
-import User from '@/app/(models)/User'
+import User, { connectDB } from '@/app/(models)/User'
 import bcrypt from "bcryptjs"
 export const options = {
   providers: [
@@ -31,6 +31,7 @@ export const options = {
       },
       authorize: async (credentials) => {
         try {
+          await connectDB();
           // Find the user in the database
           const user = await User.findOne({ email: credentials.email });
 
