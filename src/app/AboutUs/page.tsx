@@ -29,15 +29,15 @@ export default function Home() {
             onMouseLeave={() => {
               setIsHovered(false);
             }}
-            id='para'
+            className={styles.para}
           >
             At our core, we provide effective strategies for navigating mental health hurdles through the expertise of our dedicated team. Embracing a remote approach, we facilitate connections between individuals and leading mental health professionals, guaranteeing tailored care. Our dedication lies in equipping you with the tools and assistance needed to cultivate a healthier, more balanced life. Embark on a transformative journey towards mental well-being with our steadfast commitment to your empowerment and support.
           </p>
         </motion.div>
 
         <div className={styles.body}>
-          <p id='para'>
-            At <span id='span'>Harmony, </span> we offer practical solutions to mental health challenges through our expert team. Operating remotely, we connect individuals with top mental health professionals, ensuring personalized care. Our commitment is to empower you with resources and support for a healthier, balanced life. Discover a harmonious journey to mental well-being with us
+          <p className={styles.para}>
+            At <span className={styles.span}>Harmony, </span> we offer practical solutions to mental health challenges through our expert team. Operating remotely, we connect individuals with top mental health professionals, ensuring personalized care. Our commitment is to empower you with resources and support for a healthier, balanced life. Discover a harmonious journey to mental well-being with us
           </p>
         </div>
       </main>

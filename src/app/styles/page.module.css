@@ -15,12 +15,13 @@
       cursor: default;
       padding: 100px;
       
-      #para{
-        width: 1000px;
-        padding:40px;
+      .para{
+        width: 100%;
+        max-width: 1000px;
+        padding:20px;
         overflow: hidden;
       }
-      #span{
+      .span{
         color: #ec4e39;
         overflow: hidden;
       }

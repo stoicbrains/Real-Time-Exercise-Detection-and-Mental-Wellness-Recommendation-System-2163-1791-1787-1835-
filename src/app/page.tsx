@@ -29,14 +29,14 @@ export default function page() {
       <Image src={bg4} alt="error" style={{rotate:'10deg', height:'710px', width:'610px',translate:'74% 9%'}}/>
     </motion.div>
 
-        <div className="h-[70%] w-[75%] bg-[#feffe1]  rounded-[21px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] [box-shadow:15px_15px_10px_10px_rgba(100,100,100,0.6)]">
-          <div className="grid [grid-template-columns:30%_70%] h-full w-full rounded-[21px]">
+        <div className="h-[80%] md:h-[70%] w-[90%] md:w-[85%] lg:w-[75%] bg-[#feffe1]  rounded-[21px] absolute top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] [box-shadow:15px_15px_10px_10px_rgba(100,100,100,0.6)]">
+          <div className="grid grid-cols-1 md:grid-cols-[40%_60%] lg:grid-cols-[30%_70%] h-full w-full rounded-[21px] overflow-hidden">
             <div className="h-full text-black overflow-hidden relative z-[1] before:absolute before:z-[-1] before:left-0 before:[border-radius:21px_0px_0px_21px] before:top-0 before:h-[100%] before:w-0 before:[background-color:#ffed9c] before:transition-all before:duration-500 before:ease-in-out before:hover:w-[100%]">
-              <div className="flex justify-center items-center h-full w-full">
+              <div className="flex justify-center items-center h-full w-full p-4">
                 <div>
-              <h1 className="text-3xl font-bold text-center font-sans">Welcome To</h1>
-              <h1 className="text-2xl font-bold text-center font-sans">Harmony</h1>
-              <h1 className="text-center text-xl font-sans">
+              <h1 className="text-xl md:text-3xl font-bold text-center font-sans">Welcome To</h1>
+              <h1 className="text-lg md:text-2xl font-bold text-center font-sans">Harmony</h1>
+              <h1 className="text-center text-sm md:text-xl font-sans mt-2">
               Empower Your Mind, Embrace Your Journey: Your Path to Inner Harmony Begins Here.
               </h1>
               </div>
