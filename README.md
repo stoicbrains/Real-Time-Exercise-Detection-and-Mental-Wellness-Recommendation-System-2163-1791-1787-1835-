@@ -10,7 +10,7 @@ The platform also includes a community forum where users can share experiences a
 
 ## 👥 Team Members
 - Keshav Soni – 2210991787
-- Khushal Goyal – 2210991791
+- Khushal Goyal - 2210991791
 - Kushal Goel – 2210991835
 - Rishi Raj – 2210992163
 
