@@ -173,4 +173,8 @@ npm run dev
 - Firebase Authentication for secure login
 - End-to-end encrypted calls via Sendbird
 - Firestore and MongoDB access rules
-- Secure handling of sensitive user data  
+- Secure handling of sensitive user data
+
+## Deployed Link
+
+- https://real-time-exercise-detection-and-mental-wellness-nt3n27ztq.vercel.app/
