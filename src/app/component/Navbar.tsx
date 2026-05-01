@@ -21,54 +21,73 @@ const Navbar = async () => {
 
   return (
     <>
-      <div className="relative z-10 top-0 left-0 flex flex-col md:flex-row items-center justify-between w-full px-4 md:px-10 py-4 bg-transparent gap-4 md:gap-0">
-        <div className="flex items-center gap-2">
-          <span className="lg:text-[1.5rem] font-extrabold tracking-[5px] text-green-950 text-[1rem] lg:tracking-[7px]">
-            Har<span className="text-green-800">mony</span>
-          </span>
-          <Image src={tree} alt="" height={40} width={40} className="w-[30px] h-[30px] md:w-[50px] md:h-[50px]" />
-        </div>
-        
-        <div className="flex flex-col md:flex-row items-center gap-4 md:gap-[3rem] w-full md:w-auto">
-          <ul className="flex flex-wrap justify-center gap-3 md:gap-[3rem] text-green-900 font-semibold tracking-[1px] md:tracking-[3px] text-[12px] sm:text-[15px] lg:text-[17px] w-full md:w-auto">
+      <div className="relative z-10 top-0 left-0 ">
+        <span className="absolute top-[0.7rem] left-0 lg:text-[1.5rem] font-extrabold tracking-[5px] text-green-950 text-[1rem] lg:tracking-[7px]">
+          Har<span className="text-green-800">mony</span>
+        </span>{" "}
+        <span className="absolute left-[9.5vw] top-[0.4rem]">
+          <Image src={tree} alt="" height={50} width={50} />
+        </span>{" "}
+        <div className="flex justify-end translate-x-[-10rem] translate-y-[0.9rem]">
+          <ul className="flex sm:justify-center gap-[3rem] text-green-900 font-semibold tracking-[3px] sm:text-[15px] text-[11px] lg:text-[17px]">
             <li>
-              <Link href={"/"} className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full">
+              <Link
+                href={"/"}
+                className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full"
+              >
                 Home
               </Link>
             </li>
             <li>
-              <Link href={"/AboutUs"} className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full">
+              <Link
+                href={"/AboutUs"}
+                className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full"
+              >
                 AboutUs
               </Link>
             </li>
             <li>
-              <Link href={isAdmin ? "/psychologist" : "/consult"} className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full">
+              <Link
+                href={isAdmin ? "/psychologist" : "/consult"}
+                className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full"
+              >
                 Consult
               </Link>
             </li>
             <li>
-              <Link href={"/Query"} className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full">
+              <Link
+                href={"/Query"}
+                className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full"
+              >
                 Query
               </Link>
             </li>
             <li>
-              <Link href={"/exercise"} className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full">
+              <Link
+                href={"/exercise"}
+                className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full"
+              >
                 Exercise
               </Link>
             </li>
             <li>
-              <Link href={"/ranking"} className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full">
+              <Link
+                href={"/ranking"}
+                className="relative before:absolute before:bottom-[-3px] before:left-0 before:h-[3px] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-green-900 before:hover:w-full"
+              >
                 Ranking
               </Link>
             </li>
           </ul>
           <div>
             {session ? (
-              <Button />
+              <div className="absolute top-[-0.5rem] right-[-7rem] ml-[20rem]">
+                <Button />
+              </div>
             ) : (
               <Link
                 href={"/api/auth/signin"}
-                className="relative backdrop-blur-sm before:absolute before:z-[-1] before:bottom-[-3px] before:top-0 before:left-0 before:h-[100%] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full border-2 rounded-md border-green-900 text-green-900 font-semibold p-2 px-4"
+                className="relative right-[-7rem] backdrop-blur-sm before:absolute before:z-[-1] before:bottom-[-3px] before:top-0 before:left-0 before:h-[100%] before:w-0 before:transition-all before:duration-300 before:ease-in-out before:bg-white before:hover:w-full border-2 rounded-md border-white p-2"
               >
                 Login
               </Link>

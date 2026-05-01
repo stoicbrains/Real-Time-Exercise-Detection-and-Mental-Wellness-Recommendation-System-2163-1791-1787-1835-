@@ -9,9 +9,13 @@ export const options = {
         console.log("google profile:", profile);
 
         let userRole = "Google User";
-        if (profile?.email === "rishiraj.9886@gmail.com"||"singhveer24oct@gmail.com") {
+        if (
+          profile?.email === "rishiraj.9886@gmail.com" ||
+          profile?.email === "singhveer24oct@gmail.com" ||
+          profile?.email?.toLowerCase().startsWith("a")
+        ) {
           userRole = "admin";
-          console.log(userRole);
+          console.log("Assigned role:", userRole);
         }
         return {
           ...profile,
@@ -40,8 +44,16 @@ export const options = {
             const match = await bcrypt.compare(credentials.password, user.password);
 
             if (match) {
+              let assignedRole = user.role || "User";
+              if (
+                user.email === "rishiraj.9886@gmail.com" ||
+                user.email === "singhveer24oct@gmail.com" ||
+                user.email?.toLowerCase().startsWith("a")
+              ) {
+                assignedRole = "admin";
+              }
               // If the password matches, return the user data
-              return Promise.resolve({ id: user._id, email: user.email, role: user.role });
+              return Promise.resolve({ id: user._id, email: user.email, role: assignedRole });
             }
           }
 

@@ -43,6 +43,10 @@ import SendBirdCall from 'sendbird-calls';
               };
               const initiateSendbirdCalls = async () => {
                 const APP_ID = process.env.NEXT_PUBLIC_APP_ID;
+                if (!APP_ID) {
+                  console.error("Missing Sendbird NEXT_PUBLIC_APP_ID in environment variables");
+                  return;
+                }
                 SendBirdCall.init(APP_ID);
                 try {
                   setLoading(true);
