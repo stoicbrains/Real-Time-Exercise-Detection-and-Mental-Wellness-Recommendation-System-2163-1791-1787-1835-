@@ -12,7 +12,7 @@ if not hasattr(mp, "solutions"):
         "From the python-service folder run: pip install -r requirements.txt"
     )
 
-# Initialize Flask app and enable CORS (for frontend communication)
+# Initialize Flask app and enable CORS (for frontend communication) start backend py first before app
 app = Flask(__name__)
 CORS(app)
 
