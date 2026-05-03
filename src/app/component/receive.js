@@ -112,7 +112,7 @@ import SendBirdCall from 'sendbird-calls';
               }, [userId]);
               const ender =()=>{
                 setCaption(!caption);
-                call.end();
+                call?.end();
                 setindexer(false)
                 
               }
@@ -134,7 +134,7 @@ import SendBirdCall from 'sendbird-calls';
                                 <div className='flex space-x-4 absolute z-[1] top-[50%]'>
                                   <button
                                     onClick={() => {
-                                      call.end();
+                                      call?.end();
                                       setRinging(false);
                                     }}
                                     className='bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded'
@@ -219,6 +219,7 @@ import SendBirdCall from 'sendbird-calls';
                                   className='absolute top-0 left-0 w-full h-full object-cover z-0 rounded-md'
                                   id='remote_video_element_id'
                                   autoPlay={true}
+                                  playsInline={true}
                                   style={
                                     call?.isVideoCall ? { width: '100%', display: 'block' } : { display: 'none' }
                                   }
@@ -228,6 +229,8 @@ import SendBirdCall from 'sendbird-calls';
                                   id='local_video_element_id'
                                   onClick={()=>{setindexer(true)}}
                                   autoPlay={true}
+                                  playsInline={true}
+                                  muted={true}
                                   visible={call?.isVideoCall}
                                   style={
                                     call?.isVideoCall ? { width: '30%' } : { width: '0%' }}

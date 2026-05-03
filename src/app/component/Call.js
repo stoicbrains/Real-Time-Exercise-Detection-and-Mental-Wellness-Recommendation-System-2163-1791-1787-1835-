@@ -167,7 +167,7 @@ const Call = () => {
                         </button>
                       )}
                       <button
-                        onClick={() => call.end()}
+                        onClick={() => call?.end()}
                         className="bg-red-500 hover:bg-red-600 text-white font-bold py-2 px-4 rounded"
                       >
                         End Call
@@ -206,6 +206,7 @@ const Call = () => {
                       className="absolute left-0 w-[40vw] h-[70vh] object-cover z-0 rounded-lg"
                       id="remote_video_element_id"
                       autoPlay={true}
+                      playsInline={true}
                       visible={call?.isVideoCall}
                       style={
                         call?.isVideoCall ? { width: "100%",display:'block' } : { width: "0%" }
@@ -215,6 +216,8 @@ const Call = () => {
                       className="absolute top-[0] left-0 object-cover z-1 w-[300px] h-[250px] rounded-md"
                       id="local_video_element_id"
                       autoPlay={true}
+                      playsInline={true}
+                      muted={true}
                       visible={call?.isVideoCall}
                       style={
                         call?.isVideoCall ? { width: "30%" } : { width: "0%" }
